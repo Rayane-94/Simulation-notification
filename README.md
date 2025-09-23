@@ -1,22 +1,34 @@
-TP 2: Système de Notifications et Logging
-Objectif du Projet
-Construire une application en ligne de commande qui simule l'envoi de notifications via différents canaux et qui archive un historique de tous les envois réussis.
 
-Fonctionnalités Attendues
-Un Système de Notification Flexible
+# Mini Système de Notifications
 
-Votre programme doit pouvoir gérer plusieurs types de notifications : Email, SMS, et Push.
+Ce projet est une application en ligne de commande en Go qui simule l’envoi de notifications via différents canaux : SMS, Email et Push.
 
-Le notificateur SMS doit inclure une logique de validation. Si un numéro de téléphone est considéré comme invalide (par exemple, il ne commence pas par "06"), l'envoi doit échouer et retourner une erreur explicite.
-Le programme principal doit pouvoir traiter une liste contenant différents types de notificateurs les uns à la suite des autres.
-Les erreurs d'envoi doivent être capturées et affichées dans la console sans stopper le reste du programme.
 
-Un Système d'Archivage (Storer)
+# Fonctionnalités
 
-Chaque notification envoyée avec succès doit être enregistrée.
+Envoyer des notifications via SMS, Email et Push
 
-L'enregistrement doit contenir le message envoyé ainsi que la date et l'heure de l'envoi (timestamp).
-Les enregistrements seront conservés en mémoire.
-À la fin de l'exécution, le programme devra afficher la liste complète de toutes les notifications qui ont été archivées.
+Vérification de la validité des numéros de téléphone pour les SMS
 
-Concepts Clés à Utiliser : interfaces, structs, slices, gestion d'erreurs, le package time et tout ce qu'on a vu en cours ensemble.
+Archivage de toutes les notifications envoyées avec un ID unique
+
+Affichage de l’historique des notifications à la fin de l’exécution
+
+# Lancer le projet
+
+Assurez-vous d’avoir Go installé (version 1.20+ recommandée).
+
+Clonez le projet ou copiez le code dans un fichier main.go.
+
+Dans le terminal, placez-vous dans le dossier contenant main.go.
+
+Compilez et lancez le programme :
+
+```
+cd Simulation_Notification
+```
+
+```
+go run main.go
+```
+
